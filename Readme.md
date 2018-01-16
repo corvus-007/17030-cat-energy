@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Денис Васильев](https://up.htmlacademy.ru/adaptive/13/user/17030).
-* Наставник: `Неизвестно`.
+* Наставник: [Денис Васильев](https://up.htmlacademy.ru/adaptive/13/user/17030).
 
 ---
 
