@@ -1,0 +1,32 @@
+.transformation-report {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.transformation-report__item {
+  width: 124px;
+  margin: 0;
+  text-align: center;
+  border: 1px solid $gray-205;
+  border-radius: 3px;
+}
+
+.transformation-report__value {
+  font-size: 24px;
+  line-height: 24px;
+  font-family: $font-oswald;
+}
+
+.transformation-report__field {
+  margin: 0;
+  font-size: 12px;
+}
+
+.transformation-report__cost {
+  width: 100%;
+  line-height: 20px;
+  font-family: $font-oswald;
+  text-align: center;
+  text-transform: uppercase;
+}
