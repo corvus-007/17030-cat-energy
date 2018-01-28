@@ -1,0 +1,76 @@
+.transformation-tumbler {
+
+}
+
+.transformation-tumbler__radio {
+
+}
+
+.transformation-tumbler__photos {
+  position: relative;
+  width: 320px;
+  height: 240px;
+
+  @media (min-width: $tablet-width) {
+    width: 677px;
+    height: 499px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.transformation-tumbler__photobox {
+  position: absolute;
+  visibility: hidden;
+
+  @media (min-width: $tablet-width) {
+    visibility: visible;
+    width: 50%;
+    height: 499px;
+    overflow: hidden;
+
+    &--before {
+      left: 0;
+    }
+
+    &--after {
+      right: 0;
+    }
+  }
+}
+
+.transformation-tumbler__radio[value="before"]:checked ~ .transformation-tumbler__photos .transformation-tumbler__photobox--before {
+  visibility: visible;
+}
+
+.transformation-tumbler__radio[value="after"]:checked ~ .transformation-tumbler__photos .transformation-tumbler__photobox--after {
+  visibility: visible;
+}
+
+.transformation-tumbler__photo {
+  width: 320px;
+  height: 240px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 0;
+    width: 677px;
+    height: 499px;
+
+    &--before {
+      left: 0;
+    }
+
+    &--after {
+      right: 0;
+    }
+  }
+}
+
+.transformation-tumbler__controls {
+
+}
+
+.transformation-tumbler__label {
+
+}
