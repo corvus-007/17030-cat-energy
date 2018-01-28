@@ -50,6 +50,7 @@
 .transformation-tumbler__photo {
   width: 320px;
   height: 240px;
+  max-width: none;
 
   @media (min-width: $tablet-width) {
     position: absolute;
