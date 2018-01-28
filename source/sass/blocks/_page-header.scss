@@ -1,0 +1,33 @@
+.page-header {
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.page-header__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+.page-header__logo {
+  display: inline-block;
+}
+
+.page-header__logo-image {
+  display: block;
+}
+
+.page-header__logo-text-image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%, -50%);
+}
+
+.page-header__navigation {
+
+}
