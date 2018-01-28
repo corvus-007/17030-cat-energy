@@ -1,19 +1,37 @@
 .page-header {
   padding-top: 10px;
   padding-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+    background: linear-gradient(to right, #ffffff calc(50% + #{$gutter-huge}), $accent-color 0);
+  }
 }
 
 .page-header__wrapper {
+  @include make-container();
+
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: $gutter;
-  padding-right: $gutter;
 }
 
 .page-header__logo {
-  display: inline-block;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-header__logo-image {
@@ -24,8 +42,11 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  display: block;
   transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__navigation {
