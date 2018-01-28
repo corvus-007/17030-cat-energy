@@ -9,6 +9,10 @@
     padding-bottom: 60px;
     padding-left: 50px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 50px;
+  }
 }
 
 .category__title {
@@ -25,6 +29,10 @@
     margin-bottom: $gutter-big;
     font-size: 36px;
     line-height: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 45px;
   }
 }
 
@@ -83,6 +91,30 @@
       height: 112px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    width: 100px;
+    height: 100px;
+    margin-right: 65px;
+
+    &--slim::before {
+      left: 14px;
+      top: -6px;
+      width: 70px;
+      height: 97px;
+    }
+
+    &--pro::before {
+      left: -18px;
+      top: 22px;
+      width: 134px;
+      height: 56px;
+    }
+  }
 }
 
 .category__text {
@@ -99,6 +131,10 @@
     font-size: 16px;
     line-height: 24px;
     border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 35px;
   }
 }
 
