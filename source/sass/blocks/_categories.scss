@@ -1,0 +1,19 @@
+.categories {
+
+}
+
+.categories__wrapper {
+  @include make-container();
+}
+
+.categories__list {
+  @include reset-list();
+}
+
+.categories__item {
+  margin-bottom: $gutter;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: $gutter-big;
+  }
+}
