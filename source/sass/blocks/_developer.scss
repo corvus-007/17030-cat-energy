@@ -1,0 +1,33 @@
+.developer {
+
+}
+
+.developer__link {
+  display: flex;
+  align-items: center;
+  color: $gray-102;
+  text-decoration: none;
+  transition: color $duration, opacity $duration;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.developer__name {
+  color: $base-color;
+}
+
+.developer__logo {
+  margin-left: auto;
+  fill: currentColor;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 23px;
+  }
+}
