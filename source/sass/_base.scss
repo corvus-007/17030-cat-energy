@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-arial;
+  color: $base-color;
+  background-color: #ffffff;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  font-family: $font-oswald;
+  color: $gray-17;
+}
+
+b,
+strong {
+  font-weight: 500;
+  color: $gray-17;
+}
