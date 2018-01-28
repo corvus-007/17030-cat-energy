@@ -1,5 +1,7 @@
 .categories {
-
+  @media (min-width: $desktop-width) {
+    padding-top: $gutter-huge * 2;
+  }
 }
 
 .categories__wrapper {
@@ -8,6 +10,11 @@
 
 .categories__list {
   @include reset-list();
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .categories__item {
@@ -15,5 +22,14 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: $gutter-big;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: calc((100% - #{$gutter-huge * 2}) / 2);
+    margin-right: $gutter-huge * 2;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
   }
 }
