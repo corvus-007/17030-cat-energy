@@ -1,0 +1,31 @@
+.main-nav {
+
+}
+
+.main-nav__wrapper {
+  position: absolute;
+  left: 0;
+  display: none;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.main-nav__toggler {
+
+}
+
+.main-nav__list {
+  @include reset-list();
+}
+
+.main-nav__item {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 24px $gutter;
+  text-decoration: none;
+}
