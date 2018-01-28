@@ -1,0 +1,41 @@
+.transformation {
+  padding-top: 32px;
+  padding-bottom: 42px;
+  background-color: $gray-242;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 50px;
+    border-top: 1px solid $gray-230;
+    background-color: transparent;
+    background-image: linear-gradient(to top, $gray-242 462px, #ffffff 0);
+  }
+}
+
+.transformation__wrapper {
+  @include make-container();
+}
+
+.transformation__text-area {
+
+}
+
+.transformation__tumbler-area {
+
+}
+
+.transformation__title {
+  @include section-title();
+
+  margin-bottom: $gutter-big;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: ($gutter-big * 2);
+  }
+}
+
+.transformation__text {
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
