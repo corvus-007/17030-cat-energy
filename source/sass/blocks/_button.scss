@@ -1,0 +1,32 @@
+.button {
+  display: inline-block;
+  padding: 12px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-oswald;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  vertical-align: middle;
+  color: #ffffff;
+  background-color: $accent-color;
+  user-select: none;
+  box-sizing: border-box;
+  transition: $duration;
+
+  &:hover,
+  &:focus {
+    background-color: $button-color--hover;
+  }
+
+  &:active {
+    color: rgba(#ffffff, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 25px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
