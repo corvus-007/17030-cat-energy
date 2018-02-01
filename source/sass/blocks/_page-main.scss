@@ -1,0 +1,11 @@
+.page-main {
+  margin-top: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 80px;
+  }
+}
