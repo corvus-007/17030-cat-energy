@@ -1,0 +1,39 @@
+.catalog-more {
+  display: flex;
+  flex-direction: column;
+  align-items: cener;
+  padding: 25px $gutter;
+  border-top: 1px solid $gray-237;
+  border-bottom: 1px solid $gray-237;
+  text-align: center;
+
+  &::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    margin-bottom: 25px;
+    flex-shrink: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: url("../img/icon-plus-mobile.svg") no-repeat center / contain;
+    opacity: 0.2;
+  }
+}
+
+.catalog-more__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $font-oswald;
+  text-transform: uppercase;
+}
+
+.catalog-more__note {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.catalog-more__to-all {
+  margin-top: 20px;
+}
