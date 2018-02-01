@@ -24,6 +24,20 @@
     color: rgba(#ffffff, 0.3);
   }
 
+  &--gray {
+    color: $gray-68;
+    background-color: $gray-242;
+
+    &:hover,
+    &:focus {
+      background-color: $gray-235;
+    }
+
+    &:active {
+      color: rgba($gray-68, 0.3);
+    }
+  }
+
   @media (min-width: $tablet-width) {
     padding: 15px 25px;
     font-size: 20px;
