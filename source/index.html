@@ -3,40 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="homepage">
     <header class="page-header">
-      <div class="page-header__wrapper">
+      <div class="page-header__top">
         <a class="page-header__logo" href="">
           <img class="page-header__logo-image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип компании CAT ENERGY">
           <img class="page-header__logo-text-image" src="img/logo-mobile-header.svg" width="101" height="18" alt="CAT ENEGRY">
         </a>
+        <button class="page-header__navigation-toggler main-nav-toggler" type="button">Показать меню</button>
         <nav class="page-header__navigation main-nav">
-          <button class="main-nav__toggler" type="button">Показать меню</button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--active">
-                <a class="main-nav__link" href="index.html">Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="form.html">Подбор программы</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
         </nav>
       </div>
-      <section class="page-header__hero hero">
+      <div class="page-header__hero hero">
         <div class="hero__wrapper">
           <h1 class="hero__title">Функциональное питание для котов</h1>
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
           <img class="hero__image" src="img/index-can-mobile@1x.png" width="280" height="271" alt="CAT ENERGY PRO Курица">
           <a class="hero__button button" href="form.html">Подобрать программу</a>
         </div>
-      </section>
+      </div>
     </header>
 
     <main class="page-main">
@@ -73,16 +72,16 @@
           <h2 class="advantages__title">Как это работает</h2>
           <ol class="advantages__list">
             <li class="advantages__item advantages__item--icon-1">
-              Функциональное питание содержит только полезные питательные вещества.
+              <p class="advantages__text">Функциональное питание содержит только полезные питательные вещества.</p>
             </li>
             <li class="advantages__item advantages__item--icon-2">
-              Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+              <p class="advantages__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
             </li>
             <li class="advantages__item advantages__item--icon-3">
-              Замените один-два приема обычной еды на наше фунцкциональное питание.
+              <p class="advantages__text">Замените один-два приема обычной еды на наше фунцкциональное питание.</p>
             </li>
             <li class="advantages__item advantages__item--icon-4">
-              Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+              <p class="advantages__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
             </li>
           </ol>
         </div>
@@ -104,16 +103,14 @@
                 <dt class="transformation-report__value">60 дней</dt>
                 <dd class="transformation-report__field">затрачено времени</dd>
               </dl>
-              <p class="transformation-report__cost">
-                <span class="transformation-report__cost-field">Затраты на питание:</span>
-                <span class="transformation-report__cost-value">15 000 руб.</span>
-              </p>
+              <dl class="transformation-report__cost">
+                <dt class="transformation-report__cost-field">Затраты на питание:</dt>
+                <dd class="transformation-report__cost-value">15 000 руб.</dd>
+              </dl>
             </div>
           </div>
           <div class="transformation__tumbler-area">
             <div class="transformation-tumbler">
-              <input class="transformation-tumbler__radio visually-hidde" type="radio" value="before" name="transformation" id="field-transformation-before" checked>
-              <input class="transformation-tumbler__radio visually-hidde" type="radio" value="after" name="transformation" id="field-transformation-after">
               <div class="transformation-tumbler__photos">
                 <div class="transformation-tumbler__photobox transformation-tumbler__photobox--before">
                   <img class="transformation-tumbler__photo transformation-tumbler__photo--before" src="img/before-mobile@1x.png" width="320" height="240" alt="Было">
@@ -123,11 +120,11 @@
                 </div>
               </div>
               <div class="transformation-tumbler__controls">
-                <label class="transformation-tumbler__label" for="field-transformation-before">Было</label>
+                <button class="transformation-tumbler__control" type="button">Было</button>
                 <div class="transformation-tumbler__scale">
                   <div class="ransformation-tumbler__bar"></div>
                 </div>
-                <label class="transformation-tumbler__label" for="field-transformation-after">Стало</label>
+                <button class="transformation-tumbler__control" type="button">Стало</button>
               </div>
             </div>
           </div>
