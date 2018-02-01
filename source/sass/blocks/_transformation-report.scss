@@ -2,31 +2,114 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+  }
 }
 
 .transformation-report__item {
+  position: relative;
   width: 124px;
   margin: 0;
+  padding: 15px;
   text-align: center;
   border: 1px solid $gray-205;
   border-radius: 3px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    margin-right: $gutter-huge;
+    padding-bottom: 18px;
+  }
 }
 
 .transformation-report__value {
+  display: inline-block;
   font-size: 24px;
   line-height: 24px;
   font-family: $font-oswald;
+  text-transform: uppercase;
+  color: $gray-17;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .transformation-report__field {
+  position: absolute;
+  top: 100%;
+  left: 12px;
+  right: 12px;
+  display: inline-block;
   margin: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  transform: translateY(-8px);
   font-size: 12px;
+  line-height: 1;
+  background-color: $gray-242;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $gray-242;
+  }
 }
 
 .transformation-report__cost {
   width: 100%;
+  margin: 0;
+  margin-top: 35px;
   line-height: 20px;
   font-family: $font-oswald;
   text-align: center;
   text-transform: uppercase;
+  color: $gray-17;
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+    width: auto;
+    margin: 0;
+    margin-left: auto;
+    font-size: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 325px;
+    margin-top: ($gutter-big * 2);
+    margin-left: 0;
+  }
+}
+
+.transformation-report__cost-field {
+  display: inline;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+}
+
+.transformation-report__cost-value {
+  display: inline;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
