@@ -1,6 +1,5 @@
 .page-header {
   padding-top: 10px;
-  padding-bottom: 15px;
 
   @media (min-width: $tablet-width) {
     padding-top: 25px;
@@ -12,17 +11,30 @@
   }
 }
 
-.page-header__wrapper {
-  @include make-container();
-
+.page-header__top {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $gutter-big;
+    padding-right: $gutter-big;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1220px;
+    padding-left: $gutter-huge;
+    padding-right: $gutter-huge;
+  }
 }
 
 .page-header__logo {
   text-decoration: none;
+  margin-left: $gutter;
 
   &:hover,
   &:focus {
@@ -41,8 +53,16 @@
 .page-header__logo-text-image {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 10px;
+  transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__navigation-toggler {
+  margin-right: $gutter;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -50,5 +70,11 @@
 }
 
 .page-header__navigation {
+  @media (max-width: $mobile-width-max) {
+    width: 100%;
+  }
 
+  @media (min-width: $desktop-width) {
+    max-width: calc(50% - #{$gutter-huge});
+  }
 }
