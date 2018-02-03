@@ -3,9 +3,45 @@
 }
 
 .catalog__list {
-  @include reset-list();
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $gutter-big;
+    padding-right: $gutter-big;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1220px;
+    padding-left: $gutter-huge;
+    padding-right: $gutter-huge;
+  }
 }
 
 .catalog__item {
+  box-sizing: border-box;
 
+  @media (min-width: $tablet-width) {
+    min-height: 431px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+    width: calc((100% - (#{$gutter-big} * 2)) / 2);
+    margin-right: ($gutter-big * 2);
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: calc((100% - #{$gutter-huge * 2} * 3) / 4);
+    margin-right: $gutter-huge * 2;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
 }
