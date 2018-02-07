@@ -1,0 +1,32 @@
+.input {
+  width: 100%;
+  padding: 15px 16px;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $font-oswald;
+  text-transform: uppercase;
+  color: $gray-68;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px rgba($gray-205, 0.5);
+  box-sizing: border-box;
+  transition: $duration;
+  outline: none;
+
+  &:hover {
+    box-shadow: 0 0 0 1px $gray-205;
+  }
+
+  &:focus {
+    border-color: $base-color;
+  }
+
+  &::placeholder {
+    color: $base-color;
+    opacity: 1;
+  }
+
+  &:invalid,
+  &.input--error {
+    border-color: $danger-color;
+  }
+}
