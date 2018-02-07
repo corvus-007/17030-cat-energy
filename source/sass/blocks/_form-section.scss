@@ -1,0 +1,27 @@
+.form-section {
+  margin: 0;
+  padding: 0;
+  padding-bottom: $gutter-big;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 70px;
+  }
+}
+
+.form-section__body {
+  @include make-container();
+
+  @media (min-width: $tablet-width) {
+    padding-left: ($gutter-big * 2);
+    padding-right: ($gutter-big * 2);
+  }
+}
+
+.form-section__header {
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 52px;
+  }
+}
