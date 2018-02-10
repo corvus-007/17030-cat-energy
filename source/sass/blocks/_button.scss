@@ -11,8 +11,9 @@
   vertical-align: middle;
   color: #ffffff;
   background-color: $accent-color;
-  user-select: none;
+  border: none;
   box-sizing: border-box;
+  user-select: none;
   transition: $duration;
 
   &:hover,
@@ -36,11 +37,5 @@
     &:active {
       color: rgba($gray-68, 0.3);
     }
-  }
-
-  @media (min-width: $tablet-width) {
-    padding: 15px 25px;
-    font-size: 20px;
-    line-height: 20px;
   }
 }
