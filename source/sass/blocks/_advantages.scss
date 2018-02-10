@@ -79,7 +79,6 @@
       content: counter(advantages-list);
       counter-increment: advantages-list;
       position: absolute;
-      left: 130px;
       left: 42%;
       top: 0;
       font-size: 281px;
@@ -120,6 +119,5 @@
 .advantages__text {
   position: relative;
   z-index: 1;
-  // max-width: 245px;
   margin: 0;
 }
