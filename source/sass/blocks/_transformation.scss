@@ -1,6 +1,6 @@
 .transformation {
-  padding-top: 32px;
-  padding-bottom: 42px;
+  padding-top: $gutter-big;
+  padding-bottom: $gutter-huge;
   background-color: $gray-242;
 
   @media (min-width: $tablet-width) {
