@@ -6,6 +6,10 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 70px;
+
+    &--contact-person {
+      padding-bottom: 50px;
+    }
   }
 }
 
@@ -19,9 +23,9 @@
 }
 
 .form-section__header {
-  margin-bottom: 32px;
+  margin-bottom: $gutter;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 52px;
+    margin-bottom: 70px;
   }
 }
