@@ -8,7 +8,7 @@
   }
 }
 
-.transformation-report__item {
+.transformation-report__result {
   position: relative;
   width: 124px;
   margin: 0;
@@ -25,7 +25,7 @@
   }
 }
 
-.transformation-report__value {
+.transformation-report__result-value {
   display: inline-block;
   font-size: 24px;
   line-height: 24px;
@@ -39,7 +39,7 @@
   }
 }
 
-.transformation-report__field {
+.transformation-report__result-field {
   position: absolute;
   top: 100%;
   left: 12px;
@@ -54,6 +54,8 @@
   background-color: $gray-242;
 
   @media (min-width: $tablet-width) {
+    left: 10px;
+    right: 10px;
     font-size: 14px;
     background-color: #ffffff;
   }
@@ -99,7 +101,7 @@
     margin-bottom: 10px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 0;
     margin-right: 10px;
   }
