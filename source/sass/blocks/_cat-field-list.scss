@@ -1,0 +1,17 @@
+.cat-field-list {
+  margin-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.cat-field-list__item {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
