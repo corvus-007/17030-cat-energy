@@ -1,11 +1,17 @@
 .page-main {
-  margin-top: 32px;
+  margin-top: $gutter-big;
 
   @media (min-width: $tablet-width) {
     margin-top: 64px;
   }
 
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+    .homepage & {
+      margin-top: 0;
+    }
+  }
+
   @media (min-width: $desktop-width) {
-    margin-top: 80px;
+    margin-top: ($gutter-huge * 2);
   }
 }
