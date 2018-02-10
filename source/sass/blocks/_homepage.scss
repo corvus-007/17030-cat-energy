@@ -1,0 +1,8 @@
+.homepage__first-screen {
+  @media (min-width: $desktop-width) {
+    min-height: 696px;
+    padding-bottom: 55px;
+    background: url("../img/index-background-mobile@1x.jpg") no-repeat calc(50vw + #{$gutter-huge}) / calc(50vw - #{$gutter-huge}) , linear-gradient(to right, #ffffff calc(50% + #{$gutter-huge}), #64a83b 0);
+    box-sizing: border-box;
+  }
+}
