@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="homepage">
-    <header class="page-header">
-      <div class="page-header__top">
-        <a class="page-header__logo" href="">
-          <img class="page-header__logo-image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип компании CAT ENERGY">
-          <img class="page-header__logo-text-image" src="img/logo-mobile-header.svg" width="101" height="18" alt="CAT ENEGRY">
-        </a>
-        <button class="page-header__navigation-toggler main-nav-toggler" type="button">Показать меню</button>
-        <nav class="page-header__navigation main-nav">
+    <div class="homepage__first-screen">
+      <header class="page-header">
+        <nav class="page-header__main-nav main-nav main-nav--closed main-nav--no-js">
+          <a class="main-nav__logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="http://placehold.it/202x59/3E4377/fff">
+                <source media="(min-width: 768px)" srcset="http://placehold.it/173x58/FD367E/fff">
+              <img class="main-nav__logo-image" src="img/icon-logo-mobile.svg" alt="Логотип компании CAT ENERGY">
+            </picture>
+            <img class="main-nav__logo-text-image" src="img/logo-mobile-header.svg" width="101" height="18" alt="CAT ENEGRY">
+          </a>
+          <button class="main-nav__toggle" type="button">Показать меню</button>
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--active">
               <a class="main-nav__link" href="index.html">Главная</a>
@@ -27,16 +31,21 @@
             </li>
           </ul>
         </nav>
-      </div>
-      <div class="page-header__hero hero">
+      </header>
+
+      <section class="hero">
         <div class="hero__wrapper">
           <h1 class="hero__title">Функциональное питание для котов</h1>
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
-          <img class="hero__image" src="img/index-can-mobile@1x.png" width="280" height="271" alt="CAT ENERGY PRO Курица">
+          <picture class="hero__image-wrapper">
+            <source media="(min-width: 1440px)" srcset="http://placehold.it/552x499/6C567B/fff">
+            <source media="(min-width: 768px)" srcset="http://placehold.it/709x609/C06C84/fff">
+            <img class="hero__image" src="img/index-can-mobile@1x.png" alt="CAT ENERGY PRO Курица">
+          </picture>
           <a class="hero__button button" href="form.html">Подобрать программу</a>
         </div>
-      </div>
-    </header>
+      </section>
+    </div>
 
     <main class="page-main">
       <section class="categories">
@@ -95,13 +104,13 @@
               <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
             </div>
             <div class="transformation-report">
-              <dl class="transformation-report__item">
-                <dt class="transformation-report__value">5 кг</dt>
-                <dd class="transformation-report__field">снижение веса</dd>
+              <dl class="transformation-report__result">
+                <dt class="transformation-report__result-value">5 кг</dt>
+                <dd class="transformation-report__result-field">снижение веса</dd>
               </dl>
-              <dl class="transformation-report__item">
-                <dt class="transformation-report__value">60 дней</dt>
-                <dd class="transformation-report__field">затрачено времени</dd>
+              <dl class="transformation-report__result">
+                <dt class="transformation-report__result-value">60 дней</dt>
+                <dd class="transformation-report__result-field">затрачено времени</dd>
               </dl>
               <dl class="transformation-report__cost">
                 <dt class="transformation-report__cost-field">Затраты на питание:</dt>
@@ -122,7 +131,8 @@
               <div class="transformation-tumbler__controls">
                 <button class="transformation-tumbler__control" type="button">Было</button>
                 <div class="transformation-tumbler__scale">
-                  <div class="ransformation-tumbler__bar"></div>
+                  <div class="transformation-tumbler__bar"></div>
+                  <div class="transformation-tumbler__handle"></div>
                 </div>
                 <button class="transformation-tumbler__control" type="button">Стало</button>
               </div>
@@ -196,6 +206,7 @@
     </footer>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/app.js"></script>
     <script src="js/map.js"></script>
   </body>
 </html>
