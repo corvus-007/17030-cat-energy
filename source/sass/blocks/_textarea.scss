@@ -1,0 +1,9 @@
+.textarea {
+  min-height: 150px;
+  max-height: 200px;
+  resize: vertical;
+
+  @media (min-width: $tablet-width) {
+    min-height: 174px;
+  }
+}

@@ -1,0 +1,23 @@
+.page-header {
+  border-bottom: 1px solid $gray-230;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
+}
+
+.page-header__main-nav {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $gutter-big;
+    padding-right: $gutter-big;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1220px;
+    padding-left: $gutter-huge;
+    padding-right: $gutter-huge;
+  }
+}

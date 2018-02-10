@@ -1,0 +1,29 @@
+.categories__wrapper {
+  @include make-container();
+}
+
+.categories__list {
+  @include reset-list();
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.categories__item {
+  margin-bottom: $gutter;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: $gutter-big;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: calc((100% - #{$gutter-huge * 2}) / 2);
+    margin-right: $gutter-huge * 2;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}

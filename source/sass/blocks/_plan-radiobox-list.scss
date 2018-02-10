@@ -1,0 +1,35 @@
+.plan-radiobox-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+  padding: 22px $gutter;
+  border-top: 1px solid $gray-205;
+  border-bottom: 1px solid $gray-205;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-right: -($gutter-big * 2);
+    padding: 25px;
+    padding-left: 28px;
+    padding-right: ($gutter-big * 2);
+    border-left: 1px solid $gray-205;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+    border-right: 1px solid $gray-205;
+    padding-right: 28px;
+  }
+}
+
+.plan-radiobox-list__item {
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 13px;
+  }
+}

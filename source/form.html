@@ -3,147 +3,208 @@
   <head>
     <meta charset="utf-8">
     <title>Подбор программы / HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo" href="">
-          <img class="page-header__logo-image" src="http://placehold.it/33x38" alt="Логотип компании CAT ENERGY">
+      <nav class="page-header__main-nav main-nav main-nav--closed main-nav--no-js">
+        <a class="main-nav__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="http://placehold.it/202x59/3E4377/fff">
+              <source media="(min-width: 768px)" srcset="http://placehold.it/173x58/FD367E/fff">
+            <img class="main-nav__logo-image" src="img/icon-logo-mobile.svg" alt="Логотип компании CAT ENERGY">
+          </picture>
+          <img class="main-nav__logo-text-image" src="img/logo-mobile-header.svg" width="101" height="18" alt="CAT ENEGRY">
         </a>
-        <b class="page-header__company-name company-name">CAT <span class="company-name__half">ENEGRY</span></b>
-        <nav class="main-nav">
-          <div class="main-nav__wrapper">
-            <button class="main-nav__toggler" type="button">Показать меню</button>
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="">Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="">Каталог продукции</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="">Подбор программы</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+        <button class="main-nav__toggle" type="button">Показать меню</button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main class="page-main">
       <h1 class="page-title">Подбор программы</h1>
-      <p class="page-intro">Заполните анкету и мы подберем программу питания для вашего кота</p>
 
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="form__section">
-          <p class="form__row">
-            <label class="form__label" for="field-name">Имя:*</label>
-            <input class="form-input" type="text" name="name" id="field-name" placeholder="Барсик" required>
-          </p>
-          <p class="form__row">
-            <label class="form__label" for="field-weight">Вес (кг):*</label>
-            <input class="form-input" type="number" name="weight" id="field-weight" min="0" max="30" placeholder="7" required>
-          </p>
-          <p class="form__row">
-            <label class="form__label" for="field-age">Возраст (лет):</label>
-            <input class="form-input" type="number" name="age" id="field-age" min="0" max="30" placeholder="7">
-          </p>
+        <div class="form__intro">
+          <p>Заполните анкету и мы подберем программу питания для вашего кота</p>
+        </div>
+        <fieldset class="form-section">
+          <div class="form-section__body form-columns">
+            <div class="form-columns__item cat-field-list">
+              <label class="cat-field-list__item form__item form-field">
+                Имя:*
+                <input class="form-field__input input" type="text" name="name" placeholder="Барсик" required>
+              </label>
+              <label class="cat-field-list__item form__item form-field">
+                Вес (кг):*
+                <input class="form-field__input input" type="number" name="weight" min="0" max="100" placeholder="7" required>
+              </label>
+              <label class="cat-field-list__item form__item form-field">
+                Возраст (лет):
+                <input class="form-field__input input" type="number" name="age"  min="0" max="100" placeholder="7">
+              </label>
+            </div>
+            <div class="form-columns__item plan-radiobox-list">
+              <label class="plan-radiobox-list__item form__item radiobox">
+                <input class="radiobox__input" type="radio" name="plan" value="slim" checked>
+                <span class="radiobox__indicator">Похудение</span>
+              </label>
+              <label class="plan-radiobox-list__item form__item radiobox">
+                <input class="radiobox__input" type="radio" name="plan" value="pro">
+                <span class="radiobox__indicator">Набор массы</span>
+              </label>
+              <label class="plan-radiobox-list__item form__item radiobox">
+                <input class="radiobox__input" type="radio" name="plan" value="other">
+                <span class="radiobox__indicator">Не знаю (нужен ваш совет)</span>
+              </label>
+            </div>
+          </div>
         </fieldset>
-        <fieldset class="form__section">
-          <p class="form__row form-radiobox">
-            <input type="radio" name="plan" value="slim" id="field-slim" class="form-radiobox__input" checked>
-            <label for="field-slim" class="form-radiobox__text">Похудение</label>
-          </p>
-          <p class="form__row form-radiobox">
-            <input type="radio" name="plan" value="pro" id="field-pro" class="form-radiobox__input">
-            <label for="field-pro" class="form-radiobox__text">Набор массы</label>
-          </p>
-          <p class="form__row form-radiobox">
-            <input type="radio" name="plan" value="other" id="field-other" class="form-radiobox__input">
-            <label for="field-other" class="form-radiobox__text">Не знаю (нужен ваш совет)</label>
-          </p>
+        <fieldset class="form-section form-section--contact-person">
+          <legend class="form-section__header decoration-headline">
+            <h2 class="decoration-headline__title">
+              <span class="decoration-headline__title-text">Контактные данные (владельца кота)</span>
+            </h2>
+          </legend>
+          <div class="form-section__body ">
+            <div class="form-columns">
+              <label class="form-columns__item form__item form-field">
+                E-mail:*
+                <input class="form-field__input input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                <svg class="form-field__icon" width="18" height="18">
+                  <use xlink:href=""></use>
+                </svg>
+              </label>
+              <label class="form-columns__item form__item form-field">
+                Телефон:*
+                <input class="form-field__input input" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+                <svg class="form-field__icon" width="18" height="18">
+                  <use xlink:href=""></use>
+                </svg>
+              </label>
+            </div>
+          </div>
         </fieldset>
-        <fieldset class="form__section">
-          <legend class="form__title title">Контактные данные (владельца кота)</legend>
-          <p class="form__row">
-            <label class="form__label" for="field-email">E-mail:*</label>
-            <input class="form-input form-input--email" type="email" name="email" id="field-email" placeholder="kuklachev@gmail.com" required>
-          </p>
-          <p class="form__row">
-            <label class="form__label" for="field-tel">Телефон:*</label>
-            <input class="form-input form-input--tel" type="tel" name="tel" id="field-tel" placeholder="8 (960) 900-60-90" required>
-          </p>
+        <fieldset class="form-section">
+          <legend class="form-section__header decoration-headline">
+            <h2 class="decoration-headline__title">
+              <span class="decoration-headline__title-text">Комментарий</span>
+            </h2>
+          </legend>
+          <div class="form-section__body">
+            <textarea class="textarea input" name="message" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
         </fieldset>
-        <fieldset class="form__section">
-          <legend class="form__title title">Комментарий</legend>
-          <textarea class="form-textarea" name="message" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <fieldset class="form-section form-section--extra">
+          <legend class="form-section__header decoration-headline">
+            <h2 class="decoration-headline__title">
+              <span class="decoration-headline__title-text">Дополнительно</span>
+            </h2>
+          </legend>
+          <div class="form-section__body exta-checkbox-list">
+            <label class="exta-checkbox-list__item checkbox">
+              <input class="checkbox__input" type="checkbox" name="extra" value="sweetener" checked>
+              <span class="checkbox__indicator">Сахарозаменитель</span>
+            </label>
+            <label class="exta-checkbox-list__item checkbox">
+              <input class="checkbox__input" type="checkbox" name="extra" value="water">
+              <span class="checkbox__indicator">Питьевая вода</span>
+            </label>
+            <label class="exta-checkbox-list__item checkbox">
+              <input class="checkbox__input" type="checkbox" name="extra" value="milk">
+              <span class="checkbox__indicator">Молоко</span>
+            </label>
+            <label class="exta-checkbox-list__item checkbox">
+              <input class="checkbox__input" type="checkbox" name="extra" value="vitamins">
+              <span class="checkbox__indicator">Витамины</span>
+            </label>
+          </div>
         </fieldset>
-        <fieldset class="form__section">
-          <legend class="form__title title">Дополнительно</legend>
-          <p class="form__row form-checkbox">
-            <input type="checkbox" name="extra" value="sweetener" id="field-sweetener" class="form-checkbox__input" checked>
-            <label for="field-sweetener" class="form-checkbox__text">Сахарозаменитель</label>
-          </p>
-          <p class="form__row form-checkbox">
-            <input type="checkbox" name="extra" value="water" id="field-water" class="form-checkbox__input">
-            <label for="field-water" class="form-checkbox__text">Питьевая вода</label>
-          </p>
-          <p class="form__row form-checkbox">
-            <input type="checkbox" name="extra" value="milk" id="field-milk" class="form-checkbox__input">
-            <label for="field-milk" class="form-checkbox__text">Молоко</label>
-          </p>
-          <p class="form__row form-checkbox">
-            <input type="checkbox" name="extra" value="vitamins" id="field-vitamins" class="form-checkbox__input">
-            <label for="field-vitamins" class="form-checkbox__text">Витамины</label>
-          </p>
-        </fieldset>
-        <button class="form__submit button">Отправить заявку</button>
-        <div class="form__note">
-          <p>* — Обязательные поля</p>
+        <div class="form__submit-wrapper">
+          <button class="form__submit button">Отправить заявку</button>
+          <div class="form__note">
+            <p>* — Обязательные поля</p>
+          </div>
         </div>
       </form>
 
-      <section class="contacts contacts--bg-fill">
+      <section class="contacts contacts--fill-gray">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__info">
-          <div class="contacts__info-wrapper">
+        <div class="contacts__wrapper">
+          <div class="contacts__info">
             <p class="contacts__cooperation">
               <strong>Приглашаем к сотрудничеству дилеров!</strong>
             </p>
             <p class="contacts__address">
-              ул. Большая<br>
-              Конюшенная, д. 19/8<br>
-              Санкт-Петербург
+              ул. Большая
+              Конюшенная, д. 19/8
+              <span class="contacts__address-city">Санкт-Петербург</span>
             </p>
           </div>
         </div>
-        <div class="contacts__map">
-          <img src="http://placehold.it/320x360" alt="Карта">
-        </div>
+        <div class="contacts__map" id="contacts-map"></div>
       </section>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <b class="page-footer__company-name comapny-name">CAT <span class="company-name__half">ENEGRY</span></b>
-        <div class="page-footer__socil social">
+        <a class="page-footer__logo" href="index.html">
+          <img class="page-footer__logo-text-image" src="img/logo-footer.svg" width="128px" height="24px" alt="CAT ENERGY">
+        </a>
+        <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+              <a class="social__link" href="https://vk.com/htmlacademy">
+                <svg class="social__icon social__icon--vkontakte" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 12" width="18" height="18">
+                  <path d="M17.6 12c-.3 0-.9-.1-1.5-.5-.5-.3-.9-.7-1.3-1.2-.3-.3-.9-.9-1.1-.9-.2.1-.4.7-.3 1.2 0 .1 0 .6-.3.9-.3.3-.8.4-.9.4h-1.4c-.7 0-3.2-.2-5.4-2.3C2.5 7.1.2 2.2.1 2 0 1.6-.1 1.2.2.9c.3-.3.8-.4 1-.4h3.1l.7.3c.3.2.4.5.5.6a16.5 16.5 0 0 0 2.6 4c.1-.4.2-1.4.1-2.3l-.2-1a.8.8 0 0 0-.5-.2l-.6-.5c0-.5.5-.9.9-1.1.5-.2 1.3-.3 2.3-.3h.5l1.6.1c1.2.3 1.2 1.3 1.1 2.5v1.6l.1 1c.2-.1.6-.5 1.5-1.9.6-.9 1-1.9 1.1-2.1.1-.3.4-.7 1.2-.7h3.4c.7 0 1.2.2 1.3.7.2.5.1 1.3-1.7 3.5l-.7.9c-.5.4-.9 1-.9 1.1l.9.9c1.1.9 1.9 1.7 2.2 2.3.4.6.3 1 .2 1.3-.3.7-1.2.7-1.4.8h-2.8-.1zm-3.9-3.7c.7 0 1.2.6 1.8 1.2.4.4.7.8 1.1 1 .5.3 1 .3 1 .3h2.9l.4-.1-.1-.1c-.3-.5-1-1.3-2-2.1-.9-.7-1.3-1.1-1.4-1.7 0-.6.4-1.1 1.2-2.1l.7-.8a9 9 0 0 0 1.5-2.3H16.9c0 .4-.5 1.5-1.1 2.4-1.4 2.1-2 2.4-2.5 2.4l-.4-.1c-.7-.4-.7-1.4-.7-2.1v-.3-1.3c.1-1.3 0-1.3-.3-1.4l-1.4-.1H10l-1.4.1.2.2c.4.5.4 1.5.4 1.7.1 1.3 0 2.9-.7 3.3l-.4.1c-.6 0-1.3-.7-2.5-2.5L4.5 1.8l-.1-.1-.2-.1H1.3h-.1c.4.9 2.5 5 4.8 7.2 2 1.9 4.3 2 4.7 2h1.4l.2-.1v-.1c0-.2 0-2 1.2-2.3h.2z"/>
+                </svg>
+                <span class="visually-hidden">Мы в Вконтакте</span>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">Мы в Инстаграмме</a>
+              <a class="social__link" href="https://instagram.com/htmlacademy">
+                <svg class="social__icon social__icon--instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="18" height="18">
+                  <path d="M11.8 1C13.6 1 15 2.4 15 4.2v7.7c0 1.7-1.4 3.1-3.1 3.1H4.2A3.2 3.2 0 0 1 1 11.8V4.2C1 2.4 2.4 1 4.2 1h7.6m0-1H4.2A4.2 4.2 0 0 0 0 4.2v7.7C0 14.1 1.9 16 4.2 16h7.7c2.3 0 4.2-1.9 4.2-4.2V4.2C16 1.9 14.1 0 11.8 0z" class="st0"/>
+                  <path d="M8 4.9c1.7 0 3.1 1.4 3.1 3.1 0 1.7-1.4 3.1-3.1 3.1A3.1 3.1 0 0 1 4.9 8c0-1.7 1.4-3.1 3.1-3.1m0-1C5.7 3.9 3.9 5.7 3.9 8s1.8 4.1 4.1 4.1 4.1-1.8 4.1-4.1S10.3 3.9 8 3.9z" class="st0"/>
+                  <circle cx="12.3" cy="3.7" r=".9" class="st0"/>
+                </svg>
+                <span class="visually-hidden">Мы в Инстаграмме</span>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">Мы в Фейсбуке</a>
+              <a class="social__link" href="https://facebook.com/htmlacademy">
+                <svg class="social__icon social__icon--facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 19" width="18" height="18">
+                  <path d="M7.1 19H2v-8.8H0V5.8h1.9c-.1-2 .2-3.4 1.1-4.4C3.8.5 5 .1 6.5 0H10v4.2H7.2L7 5.8h3v4.4H7.1V19zm-4-1h2.8V9.1h2.9V6.8H5.9v-.5c0-1.4 0-2.6.7-3.1l.1-.1h2.1V1H6.5c-1.2.1-2 .4-2.6 1-.8.8-1 2.3-.8 4.2l.1.6H1.1v2.3h2V18z"/>
+                </svg>
+                <span class="visually-hidden">Мы в Фейсбуке</span>
+              </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__developer developer">
-          <span class="developer__name">HTML Academy</span>
-          <img class="developer__logo" src="http://placehold.it/27x34" alt="Логотип HTML Academy">
+          <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="developer__name">HTML Academy</span>
+            <svg class="developer__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.9 34.1" width="27" height="34">
+              <path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0zM25 12.1L13.5 5.3h-.2L2 12.1v-9L13.5 2 25 3.1v9zM13.4 6.8L25 13.5l-4.5 2.6-7-4.2v1.4l5.8 3.5-.8.6-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.8 1-1.8 1.2L2 13.6l11.4-6.8zM1.9 15L13.3 22v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.2-4.8V17l3.4-2v10l-11.5 6.9-11.6-7v-9.8z"/>
+            </svg>
+          </a>
         </div>
       </div>
     </footer>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/app.js"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>

@@ -1,0 +1,42 @@
+.button {
+  display: inline-block;
+  padding: 12px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-oswald;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  vertical-align: middle;
+  color: #ffffff;
+  background-color: $accent-color;
+  border: none;
+  box-sizing: border-box;
+  user-select: none;
+  transition: $duration;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $button-color--hover;
+  }
+
+  &:active {
+    color: rgba(#ffffff, 0.3);
+  }
+
+  &--gray {
+    color: $gray-68;
+    background-color: $gray-242;
+
+    &:hover,
+    &:focus {
+      background-color: $gray-235;
+    }
+
+    &:active {
+      color: rgba($gray-68, 0.3);
+    }
+  }
+}
