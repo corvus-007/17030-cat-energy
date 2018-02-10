@@ -140,12 +140,51 @@
 }
 
 .category__to-catalog {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
   font-size: 16px;
   line-height: 1;
   font-family: $font-oswald;
   text-decoration: none;
   text-transform: uppercase;
   color: $gray-17;
+  transition: opacity $duration;
+  user-select: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border-left: 7px solid currentColor;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  }
+
+  &::after {
+    content: "";
+    width: 24px;
+    height: 2px;
+    margin-left: 14px;
+    flex-shrink: 0;
+    background-color: currentColor;
+    transition: width $duration;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      width: 33px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
