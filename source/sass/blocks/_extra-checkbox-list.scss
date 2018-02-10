@@ -1,4 +1,4 @@
-.exta-checkbox-list {
+.extra-checkbox-list {
   display: flex;
   flex-direction: column;
   margin-bottom: -14px;
@@ -6,10 +6,11 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: -$gutter;
   }
 }
 
-.exta-checkbox-list__item {
+.extra-checkbox-list__item {
   margin: 0;
   margin-bottom: 14px;
 
