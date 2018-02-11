@@ -1,6 +1,12 @@
 .categories {
-  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+  margin-top: -$gutter-big;
+
+  @media (min-width: $tablet-width) {
     margin-top: -64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
   }
 }
 
@@ -11,6 +17,10 @@
 .categories__list {
   @include reset-list();
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: -$gutter-big;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
@@ -19,10 +29,6 @@
 
 .categories__item {
   margin-bottom: $gutter;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: $gutter-big;
