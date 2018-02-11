@@ -37,14 +37,14 @@
 .hero__title {
   @include section-title();
 
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: #ffffff;
 
   @media (min-width: $tablet-width) {
     z-index: 1;
     max-width: 425px;
-    margin-left: 90px;
-    margin-bottom: 35px;
+    margin-left: ($gutter-huge * 2);
+    margin-bottom: $gutter-huge;
     color: $gray-17;
   }
 }
@@ -58,8 +58,8 @@
   @media (min-width: $tablet-width) {
     z-index: 1;
     max-width: 425px;
-    margin-left: 90px;
-    margin-bottom: 45px;
+    margin-left: ($gutter-huge * 2);
+    margin-bottom: 53px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -94,7 +94,7 @@
   @media (min-width: $tablet-width) {
     z-index: 1;
     width: auto;
-    margin-left: 90px;
+    margin-left: ($gutter-huge * 2);
     padding: 15px 27px;
     font-size: 20px;
     line-height: 20px;

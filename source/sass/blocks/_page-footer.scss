@@ -4,8 +4,12 @@
   background-color: $gray-242;
 
   @media (min-width: $tablet-width) {
-    padding-top: 64px;
-    padding-bottom: 62px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: ($gutter-big * 2);
   }
 }
 
@@ -61,7 +65,7 @@
 }
 
 .page-footer__developer {
-  margin-top: $gutter;
+  margin-top: 25px;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;

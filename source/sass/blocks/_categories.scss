@@ -1,9 +1,25 @@
+.categories {
+  margin-top: -$gutter-big;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
+}
+
 .categories__wrapper {
   @include make-container();
 }
 
 .categories__list {
   @include reset-list();
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: -$gutter-big;
+  }
 
   @media (min-width: $desktop-width) {
     display: flex;

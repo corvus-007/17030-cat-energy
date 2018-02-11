@@ -1,6 +1,7 @@
 .category {
   position: relative;
   padding: $gutter;
+  padding-top: 25px;
   background-color: $gray-242;
 
   @media (min-width: $tablet-width) {
@@ -11,7 +12,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 50px;
+    padding-top: 45px;
     padding-right: 50px;
   }
 }
@@ -20,20 +21,20 @@
   display: flex;
   align-items: center;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: $gutter;
   font-size: 24px;
   line-height: 37px;
   font-family: $font-oswald;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: $gutter-big;
+    margin-bottom: $gutter;
     font-size: 36px;
     line-height: 37px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 45px;
+    margin-bottom: $gutter-huge;
   }
 }
 
@@ -122,7 +123,7 @@
   @include clear-edges-text-margins();
 
   margin-bottom: $gutter;
-  padding-bottom: $gutter;
+  padding-bottom: 25px;
   border-bottom: 1px solid $gray-217;
 
   @media (min-width: $tablet-width) {
@@ -135,7 +136,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 35px;
+    margin-bottom: 32px;
   }
 }
 

@@ -1,10 +1,11 @@
 .transformation {
   padding-top: $gutter-big;
-  padding-bottom: $gutter-huge;
+  padding-bottom: 35px;
   background-color: $gray-242;
 
   @media (min-width: $tablet-width) {
-    padding-top: 50px;
+    padding-top: 45px;
+    padding-bottom: 70px;
     border-top: 1px solid $gray-230;
     background-color: transparent;
     background-image: linear-gradient(to top, $gray-242 462px, #ffffff 0), linear-gradient(to top, $gray-234 462px, #ffffff 0);
@@ -14,6 +15,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: $gutter-big;
     border-top: none;
   }
 }
@@ -23,20 +25,20 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    align-items: flex-end;
   }
 }
 
 .transformation__text-area {
-  margin-bottom: 45px;
+  margin-bottom: $gutter-big;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: ($gutter-huge * 2);
+    margin-bottom: 85px;
   }
 
   @media (min-width: $desktop-width) {
     width: calc(50% - #{$gutter-huge});
     margin-bottom: 0;
+    padding-top: 55px;
     padding-right: 135px;
     box-sizing: border-box;
   }
@@ -55,7 +57,7 @@
   margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: ($gutter-big * 2);
+    margin-bottom: 65px;
   }
 
   @media (min-width: $desktop-width) {
@@ -71,6 +73,7 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: $desktop-width) {
