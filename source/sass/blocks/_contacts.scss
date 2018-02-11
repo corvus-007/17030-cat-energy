@@ -5,8 +5,8 @@
 
   @media (min-width: $desktop-width) {
     position: relative;
-    padding-top: 95px;
-    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 105px;
   }
 }
 
@@ -24,7 +24,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 65px;
-    padding-bottom: 50px;
+    padding-bottom: 65px;
     padding-left: $gutter-huge;
     padding-right: $gutter-huge;
   }
@@ -78,7 +78,6 @@
 .contacts__map {
   overflow: hidden;
   height: 362px;
-  background-color: #eaffd0;
 
   @media (min-width: $tablet-width) {
     height: 395px;
