@@ -5,12 +5,6 @@
     margin-top: 64px;
   }
 
-  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
-    .homepage & {
-      margin-top: 0;
-    }
-  }
-
   @media (min-width: $desktop-width) {
     margin-top: ($gutter-huge * 2);
   }
