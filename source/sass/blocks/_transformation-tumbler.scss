@@ -12,6 +12,10 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
+  }
 }
 
 .transformation-tumbler__photobox {
@@ -64,21 +68,45 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-end;
+  }
 }
 
 .transformation-tumbler__control {
+  padding: 0;
   font-size: 16px;
   line-height: 20px;
   font-family: $font-oswald;
   text-decoration: none;
   text-transform: uppercase;
   border: none;
+  color: $gray-17;
   background: transparent;
   user-select: none;
   cursor: pointer;
+  outline: none;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 2px;
+    font-size: 20px;
+    border-bottom: 1px dotted rgba($gray-17, 0.23);
+    transition: border-bottom $duration;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid rgba($gray-17, 0.4);
+    }
+
+    &:active {
+      border-bottom-color: transparent;
+    }
+  }
 }
 
 .transformation-tumbler__scale {
+  position: relative;
   width: 84px;
   height: 14px;
   margin-left: 18px;
@@ -88,6 +116,17 @@
   border-radius: 6px;
   background-color: #ffffff;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 428px;
+    height: 6px;
+    margin-left: $gutter;
+    margin-right: $gutter;
+    padding: 0;
+    border: none;
+    border-radius: 2.5px;
+    background-color: $gray-220;
+  }
 }
 
 .transformation-tumbler__bar {
@@ -95,12 +134,53 @@
   height: 100%;
   border-radius: 3px;
   background-color: $accent-color;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
-.ransformation-tumbler__handle {
+.transformation-tumbler__handle {
   display: none;
 
   @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     display: block;
+    width: 34px;
+    height: 34px;
+    transform: translate(-50%, -50%);
+    border: 1px solid $gray-205;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(#000000, 0.15);
+    box-sizing: border-box;
+    transition: $duration;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 8px;
+      height: 8px;
+      margin: auto;
+      border-radius: 50%;
+      background-color: $accent-color;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 3px 5px 0 rgba(#000000, 0.25);
+    }
+
+    &:active {
+      box-shadow: 0 4px 5px 0 rgba(#000000, 0.3), inset 0 0 0 1px $accent-color;
+      border-color: $accent-color;
+    }
   }
 }
