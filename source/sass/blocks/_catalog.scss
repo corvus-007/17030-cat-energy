@@ -1,9 +1,17 @@
+.catalog {
+  @media (min-width: $tablet-width) {
+    padding-top: 24px;
+    padding-bottom: $gutter-big;
+  }
+}
+
 .catalog__list {
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: -($gutter-big * 2);
     padding-left: $gutter-big;
     padding-right: $gutter-big;
   }
