@@ -1,5 +1,6 @@
 .form {
-  padding-bottom: 35px;
+  margin-top: -5px;
+  padding-bottom: $gutter-big;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 72px;
