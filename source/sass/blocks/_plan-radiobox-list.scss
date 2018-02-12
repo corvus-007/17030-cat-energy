@@ -4,6 +4,7 @@
   margin-left: -$gutter;
   margin-right: -$gutter;
   padding: 22px $gutter;
+  padding-bottom: 10px;
   border-top: 1px solid $gray-205;
   border-bottom: 1px solid $gray-205;
   box-sizing: border-box;
@@ -25,6 +26,8 @@
 }
 
 .plan-radiobox-list__item {
+  margin-bottom: 12px;
+
   &:last-child {
     margin-bottom: 0;
   }
