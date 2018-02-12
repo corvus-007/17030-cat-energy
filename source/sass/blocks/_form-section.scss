@@ -1,8 +1,12 @@
 .form-section {
   margin: 0;
   padding: 0;
-  padding-bottom: $gutter-big;
+  padding-bottom: 25px;
   border: none;
+
+  &--contact-person {
+    padding-bottom: $gutter;
+  }
 
   @media (min-width: $tablet-width) {
     padding-bottom: 70px;
@@ -23,7 +27,7 @@
 }
 
 .form-section__header {
-  margin-bottom: $gutter;
+  margin-bottom: $gutter-big;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 70px;
