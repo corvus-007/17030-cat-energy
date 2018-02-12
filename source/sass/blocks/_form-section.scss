@@ -25,10 +25,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 75px;
+    padding-bottom: 65px;
 
     &--contact-person {
       padding-bottom: 50px;
+    }
+
+    &--extra {
+      padding-bottom: ($gutter-big * 2);
     }
   }
 }
