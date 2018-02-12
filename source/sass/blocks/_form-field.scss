@@ -8,6 +8,11 @@
   color: $gray-34;
   white-space: nowrap;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .form-field__input {
