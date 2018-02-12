@@ -48,6 +48,7 @@
     margin-right: 16px;
     border: 1px solid $gray-205;
     transition: border-color $duration;
+    box-sizing: border-box;
   }
 
   &::after {

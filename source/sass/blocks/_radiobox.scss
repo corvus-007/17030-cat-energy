@@ -49,6 +49,7 @@
     border: 1px solid $gray-205;
     border-radius: 50%;
     transition: border-color $duration;
+    box-sizing: border-box;
   }
 
   &::after {

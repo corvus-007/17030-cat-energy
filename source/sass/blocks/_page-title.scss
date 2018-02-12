@@ -2,7 +2,7 @@
   @include make-container();
 
   margin-top: 0;
-  margin-bottom: 35px;
+  margin-bottom: $gutter-big;
   font-size: 36px;
   line-height: 60px;
   font-family: $font-oswald;

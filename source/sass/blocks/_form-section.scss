@@ -1,14 +1,38 @@
 .form-section {
   margin: 0;
   padding: 0;
-  padding-bottom: $gutter-big;
+  padding-bottom: 25px;
   border: none;
+
+  &--contact-person {
+    padding-bottom: $gutter;
+  }
 
   @media (min-width: $tablet-width) {
     padding-bottom: 70px;
 
     &--contact-person {
       padding-bottom: 50px;
+    }
+
+    &--message {
+      padding-bottom: 65px;
+    }
+
+    &--extra {
+      padding-bottom: $gutter-big;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 65px;
+
+    &--contact-person {
+      padding-bottom: 50px;
+    }
+
+    &--extra {
+      padding-bottom: ($gutter-big * 2);
     }
   }
 }
@@ -17,15 +41,15 @@
   @include make-container();
 
   @media (min-width: $tablet-width) {
-    padding-left: ($gutter-big * 2);
-    padding-right: ($gutter-big * 2);
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
 
 .form-section__header {
-  margin-bottom: $gutter;
+  margin-bottom: $gutter-big;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 75px;
   }
 }

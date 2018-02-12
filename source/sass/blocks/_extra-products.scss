@@ -5,6 +5,11 @@
   @media (min-width: $tablet-width) {
     padding-bottom: 75px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 50px;
+    padding-bottom: ($gutter-huge * 2);
+  }
 }
 
 .extra-products__header {
@@ -29,7 +34,7 @@
   margin-bottom: $gutter-huge;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: $desktop-width) {
@@ -42,7 +47,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 15px;
+  padding-top: 13px;
   padding-bottom: 17px;
   font-size: 14px;
   line-height: 14px;
@@ -68,7 +73,7 @@
 
   @media (min-width: $desktop-width) {
     flex-wrap: nowrap;
-    padding: 15px 0;
+    padding: 16px 0;
     border-left: none;
     border-right: none;
   }
@@ -143,7 +148,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 65px;
-  padding-bottom: $gutter-huge;
+  padding-bottom: 50px;
   color: #ffffff;
   background: $accent-color url("../img/gift-photo-mobile@1x.jpg") no-repeat center / cover;
   box-sizing: border-box;
@@ -153,7 +158,8 @@
     justify-content: space-between;
     padding-left: 90px;
     padding-right: 115px;
-    padding-bottom: 65px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 
   @media (min-width: $desktop-width) {
@@ -161,12 +167,13 @@
     flex-direction: column;
     justify-content: center;
     padding: 37px;
+    padding-top: 50px;
     margin-left: ($gutter-huge * 2);
   }
 }
 
 .extra-products__promo-icon {
-  margin-bottom: 65px;
+  margin-bottom: ($gutter-big * 2);
   fill: currentColor;
 
   @media (min-width: $tablet-width) {

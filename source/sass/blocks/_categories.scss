@@ -1,8 +1,8 @@
 .categories {
-  margin-top: -$gutter-big;
+  margin-top: -15px;
 
   @media (min-width: $tablet-width) {
-    margin-top: -64px;
+    margin-top: -($gutter-big * 2);
   }
 
   @media (min-width: $desktop-width) {
