@@ -14,6 +14,22 @@
     &--contact-person {
       padding-bottom: 50px;
     }
+
+    &--message {
+      padding-bottom: 65px;
+    }
+
+    &--extra {
+      padding-bottom: $gutter-big;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 75px;
+
+    &--contact-person {
+      padding-bottom: 50px;
+    }
   }
 }
 
@@ -21,8 +37,8 @@
   @include make-container();
 
   @media (min-width: $tablet-width) {
-    padding-left: ($gutter-big * 2);
-    padding-right: ($gutter-big * 2);
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
 
@@ -30,6 +46,6 @@
   margin-bottom: $gutter-big;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 75px;
   }
 }
