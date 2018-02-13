@@ -150,8 +150,23 @@
   padding-top: 65px;
   padding-bottom: 50px;
   color: #ffffff;
-  background: $accent-color url("../img/gift-photo-mobile@1x.jpg") no-repeat center / cover;
+  background: $accent-color url("../img/gift-photo-mobile@1x.jpg") no-repeat center;
+  background-size: cover;
   box-sizing: border-box;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 60px;
+    background: url("../img/icon-gift.svg") no-repeat center;
+    background-size: contain;
+    margin-bottom: ($gutter-big * 2);
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -160,35 +175,39 @@
     padding-right: 115px;
     padding-top: 70px;
     padding-bottom: 70px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    &::before {
+      margin-bottom: 0;
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-column-width;
     flex-direction: column;
     justify-content: center;
+    width: $desktop-column-width;
+    margin-left: ($gutter-huge * 2);
     padding: 37px;
     padding-top: 50px;
-    margin-left: ($gutter-huge * 2);
-  }
-}
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
 
-.extra-products__promo-icon {
-  margin-bottom: ($gutter-big * 2);
-  fill: currentColor;
+    &::before {
+      margin-bottom: 65px;
+    }
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 65px;
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 }
 
 .extra-products__promo-text {
-  @include clear-edges-text-margins();
-
   max-width: 170px;
+  margin: 0;
   font-size: 16px;
   text-align: center;
 
