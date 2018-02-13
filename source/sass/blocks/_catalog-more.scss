@@ -15,7 +15,8 @@
     flex-shrink: 0;
     margin-left: auto;
     margin-right: auto;
-    background: url("../img/icon-plus-mobile.svg") no-repeat center / contain;
+    background: url("../img/icon-plus-mobile.svg") no-repeat center;
+    background-size: contain;
     opacity: 0.2;
   }
 
@@ -30,6 +31,7 @@
       width: 60px;
       height: 60px;
       margin-bottom: 50px;
+      background-image: url("../img/icon-plus.svg");
     }
   }
 }

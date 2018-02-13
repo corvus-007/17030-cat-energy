@@ -1,8 +1,23 @@
 .homepage__first-screen {
   @media (min-width: $desktop-width) {
+    position: relative;
     min-height: 696px;
     padding-bottom: 55px;
-    background: url("../img/index-background-mobile@1x.jpg") no-repeat calc(50vw + #{$gutter-huge}) / calc(50vw - #{$gutter-huge}), linear-gradient(to right, #ffffff calc(50% + #{$gutter-huge}), #64a83b 0);
     box-sizing: border-box;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: calc(50% + #{$gutter-huge});
+      background: #64a83b url("../img/index-background-desktop@1x.jpg") no-repeat right top;
+      background-size: 680px auto;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
+    }
   }
 }
