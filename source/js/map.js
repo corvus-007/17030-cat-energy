@@ -1,12 +1,25 @@
 ymaps.ready(initMap);
 
 function initMap() {
-  var centerMap = [59.936326864825475, 30.321777768508905];
-  if (window.matchMedia('(min-width: 1440px)').matches) {
-    centerMap = [59.936326864825475, 30.3182];
+  var contactsMap = document.getElementById('contacts-map');
+
+  if (contactsMap) {
+    contactsMap.classList.remove('contacts__map--no-js');
   }
 
-  var map = new ymaps.Map("contacts-map", {
+  var centerMap = [59.938680, 30.323103];
+  var pinSize = [62, 53];
+  var pinOffset = [-31, -53];
+
+  if (window.matchMedia('(min-width: 768px)').matches) {
+    pinSize = [124, 106];
+    pinOffset = [-62, -106];
+  }
+  if (window.matchMedia('(min-width: 1440px)').matches) {
+    centerMap = [59.938680, 30.3182];
+  }
+
+  var map = new ymaps.Map(contactsMap, {
     center: centerMap,
     zoom: 17,
     controls: []
@@ -14,13 +27,13 @@ function initMap() {
 
   map.behaviors.disable(['scrollZoom']);
 
-  var mapMarker = new ymaps.Placemark([59.936326864825475, 30.321777768508905], {
+  var mapMarker = new ymaps.Placemark([59.938680, 30.323103], {
     hintContent: "г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101"
   }, {
     iconLayout: 'default#image',
     iconImageHref: 'img/map-pin.png',
-    iconImageSize: [62, 53],
-    iconImageOffset: [-31, -53]
+    iconImageSize: pinSize,
+    iconImageOffset: pinOffset
   });
 
   map.geoObjects.add(mapMarker);
