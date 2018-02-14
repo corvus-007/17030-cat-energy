@@ -9,6 +9,12 @@
   white-space: nowrap;
   text-transform: uppercase;
 
+  &--has-icon {
+    .form-field__input {
+      padding-right: $gutter-huge;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
@@ -26,16 +32,13 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  background-color: $base-color;
   fill: $base-color;
 }
 
 .form-field__input:focus + .form-field__icon {
-  background-color: $accent-color;
   fill: $accent-color;
 }
 
 .form-field__input:invalid + .form-field__icon {
-  background-color: $danger-color;
   fill: $danger-color;
 }
