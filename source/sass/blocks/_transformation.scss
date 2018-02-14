@@ -2,6 +2,7 @@
   padding-top: $gutter-big;
   padding-bottom: 35px;
   background-color: $gray-242;
+  overflow-x: hidden;
 
   @media (min-width: $tablet-width) {
     padding-top: 45px;
