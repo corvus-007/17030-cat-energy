@@ -14,7 +14,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 55px;
+    margin-bottom: 35px;
   }
 }
 
@@ -38,6 +38,16 @@
 
     &--after {
       right: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--before {
+      width: calc(50% + #{$gutter});
+    }
+
+    &--after {
+      width: calc(50% - #{$gutter});
     }
   }
 }
@@ -72,6 +82,10 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 20px;
+  }
 }
 
 .transformation-tumbler__control {
@@ -89,7 +103,8 @@
   outline: none;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 2px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     font-size: 20px;
     border-bottom: 1px dotted rgba($gray-17, 0.23);
     transition: border-bottom $duration;
