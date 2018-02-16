@@ -16,7 +16,7 @@ function initMap() {
     pinOffset = [-62, -106];
   }
   if (window.matchMedia('(min-width: 1440px)').matches) {
-    centerMap = [59.938680, 30.3182];
+    centerMap = [59.938985, 30.3182];
   }
 
   var map = new ymaps.Map(contactsMap, {
