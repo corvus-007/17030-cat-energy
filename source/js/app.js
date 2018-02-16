@@ -1,4 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
+  svg4everybody();
+
   var toggleMenu = document.querySelector('.main-nav__toggle');
   var mainNav = document.querySelector('.main-nav');
 

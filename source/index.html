@@ -38,6 +38,9 @@
           <h1 class="hero__title">Функциональное питание для котов</h1>
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
           <picture class="hero__image-wrapper">
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/index-can-desktop@1x.webp, img/index-can-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/index-can-tablet@1x.webp, img/index-can-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/index-can-mobile@1x.webp, img/index-can-mobile@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg, img/index-can-tablet@2x.jpg 2x">
             <img class="hero__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="CAT ENERGY PRO Курица">
@@ -123,6 +126,9 @@
               <div class="transformation-tumbler__photos">
                 <div class="transformation-tumbler__photobox transformation-tumbler__photobox--before">
                   <picture>
+                    <source media="(min-width: 1440px)" type="image/webp" srcset="img/before-desktop@1x.webp, img/before-desktop@2x.webp 2x">
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/before-tablet@1x.webp, img/before-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/before-mobile@1x.webp, img/before-mobile@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
                     <img class="transformation-tumbler__photo transformation-tumbler__photo--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Было">
@@ -130,6 +136,9 @@
                 </div>
                 <div class="transformation-tumbler__photobox transformation-tumbler__photobox--after">
                   <picture>
+                    <source media="(min-width: 1440px)" type="image/webp" srcset="img/after-desktop@1x.webp, img/after-desktop@2x.webp 2x">
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/after-tablet@1x.webp, img/after-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/after-mobile@1x.webp, img/after-mobile@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
                     <img class="transformation-tumbler__photo transformation-tumbler__photo--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Стало">
@@ -212,6 +221,8 @@
     </footer>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/picturefill.js"></script>
+    <script src="js/svg4everybody.js"></script>
     <script src="js/app.js"></script>
     <script src="js/map.js"></script>
   </body>

@@ -8,7 +8,6 @@
     padding-top: 45px;
     padding-bottom: 70px;
     border-top: 1px solid $gray-230;
-    background-color: transparent;
     background-image: linear-gradient(to top, $gray-242 462px, #ffffff 0), linear-gradient(to top, $gray-234 462px, #ffffff 0);
     background-position: 0 0;
     background-size: 50% 100%, 100% 100%;
@@ -18,6 +17,7 @@
   @media (min-width: $desktop-width) {
     padding-top: $gutter-big;
     border-top: none;
+    background-size: calc(50% + 690px / 2 - #{$gutter}) 100%, 100% 100%;
   }
 }
 

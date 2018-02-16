@@ -35,10 +35,12 @@
   fill: $base-color;
 }
 
-.form-field__input:focus + .form-field__icon {
-  fill: $accent-color;
-}
+.form-field__input:focus {
+  & + .form-field__icon {
+    fill: $accent-color;
+  }
 
-.form-field__input:invalid + .form-field__icon {
-  fill: $danger-color;
+  &:invalid + .form-field__icon {
+    fill: $danger-color;
+  }
 }

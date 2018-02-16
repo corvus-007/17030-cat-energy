@@ -18,15 +18,15 @@
 
   &:focus {
     border-color: $base-color;
+
+    &:invalid {
+      border-color: $danger-color;
+    }
   }
 
   &::placeholder {
     color: $base-color;
     opacity: 1;
-  }
-
-  &:invalid {
-    border-color: $danger-color;
   }
 
   @media (min-width: $tablet-width) {
