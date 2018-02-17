@@ -3,6 +3,7 @@
   src: local("Oswald"), url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -10,4 +11,5 @@
   src: local("Oswald"), url("../fonts/oswaldmeduim.woff2") format("woff2"), url("../fonts/oswaldmeduim.woff") format("woff");
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
 }
