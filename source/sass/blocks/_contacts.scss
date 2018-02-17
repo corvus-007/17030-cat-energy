@@ -70,7 +70,7 @@
 
 .contacts__address-city {
   @media (min-width: $tablet-width) {
-    margin-top: 1em;
+    margin-top: $gutter;
     display: block;
   }
 }

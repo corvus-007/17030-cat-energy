@@ -16,19 +16,27 @@
     }
 
     &--message {
-      padding-bottom: 65px;
+      padding-bottom: 60px;
     }
 
     &--extra {
-      padding-bottom: $gutter-big;
+      padding-bottom: 35px;
     }
   }
 
   @media (min-width: $desktop-width) {
     padding-bottom: 65px;
 
+    &--cat-info {
+      padding-bottom: 70px;
+    }
+
     &--contact-person {
       padding-bottom: 50px;
+    }
+
+    &--message {
+      padding-bottom: 60px;
     }
 
     &--extra {

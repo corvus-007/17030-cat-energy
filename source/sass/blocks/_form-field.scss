@@ -24,6 +24,20 @@
 .form-field__input {
   margin-left: 15px;
   flex-grow: 1;
+
+  &:focus {
+    & + .form-field__icon {
+      fill: $accent-color;
+    }
+
+    &:invalid + .form-field__icon {
+      fill: $danger-color;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: $gutter;
+  }
 }
 
 .form-field__icon {
@@ -33,14 +47,4 @@
   bottom: 0;
   margin: auto;
   fill: $base-color;
-}
-
-.form-field__input:focus {
-  & + .form-field__icon {
-    fill: $accent-color;
-  }
-
-  &:invalid + .form-field__icon {
-    fill: $danger-color;
-  }
 }

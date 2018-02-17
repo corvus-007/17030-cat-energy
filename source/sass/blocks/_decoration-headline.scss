@@ -8,11 +8,17 @@
     content: "";
     flex-grow: 1;
     position: absolute;
-    top: 50%;
+    top: 13px;
     left: 0;
     right: 0;
     height: 3px;
     background-color: $accent-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      top: 22px;
+    }
   }
 }
 
@@ -34,6 +40,8 @@
 .decoration-headline__title-text {
   position: relative;
   z-index: 1;
+  display: inline-block;
+  vertical-align: top;
 
   &::before {
     content: "";
@@ -42,13 +50,17 @@
     top: 5px;
     right: -$gutter;
     bottom: 5px;
-    background-color: #ffffff;
     z-index: -1;
+    background-color: #ffffff;
   }
 
   @media (min-width: $tablet-width) {
     padding-left: $gutter-huge;
     padding-right: $gutter-huge;
+
+    & br {
+      display: none;
+    }
 
     &::before {
       left: 0;

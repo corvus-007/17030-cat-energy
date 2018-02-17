@@ -9,8 +9,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    padding: 37px;
-    padding-top: 0;
+    padding: 0;
     padding-bottom: $gutter-huge;
     border-top: none;
     background-image: linear-gradient(to bottom, #ffffff 82px, $gray-242 0);
@@ -28,7 +27,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 65px;
+    margin-bottom: $gutter-huge;
   }
 }
 
@@ -44,7 +43,10 @@
   width: 50%;
 
   @media (min-width: $tablet-width) {
-    width: 100%;
+    width: auto;
+    align-self: stretch;
+    margin-left: 37px;
+    margin-right: 37px;
   }
 }
 
@@ -98,4 +100,11 @@
   width: 100%;
   font-size: 16px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    align-self: stretch;
+    margin-left: 37px;
+    margin-right: 37px;
+  }
 }
