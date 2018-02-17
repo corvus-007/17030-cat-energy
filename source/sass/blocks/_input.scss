@@ -40,4 +40,9 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
