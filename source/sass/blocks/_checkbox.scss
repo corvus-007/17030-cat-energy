@@ -5,11 +5,6 @@
   text-transform: uppercase;
   user-select: none;
   cursor: pointer;
-  transition: opacity $duration;
-
-  &:active {
-    opacity: 0.3;
-  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -29,6 +24,7 @@
 
   &:checked {
     & + .checkbox__indicator::after {
+      transform: rotate(-45deg) scale(1);
       opacity: 1;
     }
   }
@@ -66,9 +62,9 @@
     border: 2px solid $accent-color;
     border-top: none;
     border-right: none;
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) scale(0);
     opacity: 0;
-    transition: opacity $duration;
+    transition: $duration;
   }
 
   @media (min-width: $tablet-width) {
