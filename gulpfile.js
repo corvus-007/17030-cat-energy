@@ -2,6 +2,9 @@
 
 var gulp = require('gulp');
 var rename = require('gulp-rename');
+var htmlmin = require('gulp-htmlmin');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
 var minify = require('gulp-csso');
 var sass = require('gulp-sass');
 var imagemin = require('gulp-imagemin');
@@ -25,6 +28,25 @@ gulp.task('style', function() {
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css'))
     .pipe(server.stream());
+});
+
+gulp.task('minify-scripts', function(cb) {
+  pump(
+    [
+      gulp.src('source/js/*.js'),
+      uglify(),
+      rename({ suffix: '.min' }),
+      gulp.dest('build/js')
+    ],
+    cb
+  );
+});
+
+gulp.task('minify-html', function() {
+  return gulp
+    .src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
 });
 
 gulp.task('images', function() {
@@ -59,20 +81,9 @@ gulp.task('svg-symbols', function() {
     .pipe(gulp.dest('build/img'));
 });
 
-gulp.task('copy-html', function() {
-  return gulp.src('source/**.html', { base: 'source' })
-  .pipe(gulp.dest('build'));
-});
-
 gulp.task('copy-img', function() {
   return gulp
     .src('source/img/**/*.{jpg,png,svg}', { base: 'source' })
-    .pipe(gulp.dest('build'));
-});
-
-gulp.task('copy-js', function() {
-  return gulp
-    .src('source/js/**.js', { base: 'source' })
     .pipe(gulp.dest('build'));
 });
 
@@ -86,10 +97,19 @@ gulp.task('clean', function() {
   return del('build');
 });
 
-gulp.task('copy', ['copy-html', 'copy-img', 'copy-js', 'copy-fonts']);
+gulp.task('copy', ['copy-img', 'copy-fonts']);
 
 gulp.task('build', function(done) {
-  run('clean', 'copy', 'svg-symbols', 'style', 'webp', done);
+  run(
+    'clean',
+    'copy',
+    'minify-html',
+    'svg-symbols',
+    'style',
+    'minify-scripts',
+    'webp',
+    done
+  );
 });
 
 gulp.task('serve', function() {
@@ -102,5 +122,6 @@ gulp.task('serve', function() {
   });
 
   gulp.watch('source/sass/**/*.{scss,sass}', ['style']);
-  gulp.watch('source/*.html', ['copy-html']).on('change', server.reload);
+  gulp.watch('source/js/*.js', ['minify-scripts']).on('change', server.reload);
+  gulp.watch('source/*.html', ['minify-html']).on('change', server.reload);
 });
