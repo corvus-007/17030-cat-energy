@@ -1,4 +1,5 @@
 .page-footer {
+  position: relative;
   padding-top: $gutter-huge;
   padding-bottom: $gutter;
   background-color: $gray-242;
@@ -30,12 +31,12 @@
   text-decoration: none;
   transition: opacity $duration;
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     opacity: 0.8;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.6;
   }
 
@@ -57,6 +58,11 @@
   border-bottom: 1px solid $gray-217;
 
   @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: -10px;
     padding-top: 0;
     padding-bottom: 0;
     border-top: none;
@@ -69,5 +75,9 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
   }
 }
