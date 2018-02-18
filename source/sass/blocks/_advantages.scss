@@ -37,7 +37,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: -45px;
+    margin-bottom: -175px;
   }
 }
 
@@ -131,9 +131,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 245px;
+    width: calc((100% - #{$gutter-huge * 2} * 3) / 4);
     margin-right: ($gutter-huge * 2);
-    margin-bottom: 0;
 
     &:nth-child(4n) {
       margin-right: 0;
