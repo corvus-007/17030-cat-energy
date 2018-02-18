@@ -173,6 +173,7 @@
     box-sizing: border-box;
     transition: $duration;
     cursor: pointer;
+    outline: none;
 
     &::before {
       content: "";
