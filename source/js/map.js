@@ -15,7 +15,7 @@ function initMap() {
     pinSize = [124, 106];
     pinOffset = [-62, -106];
   }
-  if (window.matchMedia('(min-width: 1440px)').matches) {
+  if (window.matchMedia('(min-width: 1300px)').matches) {
     centerMap = [59.938985, 30.3182];
   }
 
