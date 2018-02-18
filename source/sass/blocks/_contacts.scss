@@ -42,9 +42,11 @@
 .contacts__cooperation {
   flex-basis: 140px;
   margin: 0;
+  font-weight: 400;
   font-size: 16px;
   font-family: $font-oswald;
   text-transform: uppercase;
+  color: $gray-17;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;

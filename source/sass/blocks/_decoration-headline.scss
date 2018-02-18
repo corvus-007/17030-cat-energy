@@ -27,9 +27,11 @@
 
   margin-top: 0;
   margin-bottom: 0;
+  font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   font-family: $font-oswald;
+  color: $gray-17;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;

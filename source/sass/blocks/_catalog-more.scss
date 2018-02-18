@@ -39,10 +39,12 @@
 .catalog-more__title {
   margin: 0;
   margin-bottom: 10px;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   font-family: $font-oswald;
   text-transform: uppercase;
+  color: $gray-17;
 
   @media (min-width: $tablet-width) {
     max-width: 140px;

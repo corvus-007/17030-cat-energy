@@ -3,9 +3,11 @@
 
   margin-top: 0;
   margin-bottom: $gutter-big;
+  font-weight: 400;
   font-size: 36px;
   line-height: 60px;
   font-family: $font-oswald;
+  color: $gray-17;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 55px;
