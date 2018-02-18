@@ -56,10 +56,10 @@
   &::after {
     content: "";
     position: absolute;
-    left: 7px;
-    top: 7px;
-    width: 18px;
-    height: 18px;
+    left: 9px;
+    top: 9px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: $accent-color;
     opacity: 0;
@@ -76,6 +76,8 @@
     &::after {
       left: 11px;
       top: 11px;
+      width: 18px;
+      height: 18px;
     }
   }
 }
