@@ -2,6 +2,9 @@
 
 var gulp = require('gulp');
 var rename = require('gulp-rename');
+var plumber = require('gulp-plumber');
+var posthtml = require('gulp-posthtml');
+var include = require('posthtml-include');
 var htmlmin = require('gulp-htmlmin');
 var uglify = require('gulp-uglify');
 var pump = require('pump');
@@ -10,7 +13,6 @@ var sass = require('gulp-sass');
 var imagemin = require('gulp-imagemin');
 var webp = require('gulp-webp');
 var svgstore = require('gulp-svgstore');
-var plumber = require('gulp-plumber');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var run = require('run-sequence');
@@ -42,9 +44,10 @@ gulp.task('minify-scripts', function(cb) {
   );
 });
 
-gulp.task('minify-html', function() {
+gulp.task('html', function() {
   return gulp
     .src('source/*.html')
+    .pipe(posthtml([include()]))
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 });
@@ -103,8 +106,8 @@ gulp.task('build', function(done) {
   run(
     'clean',
     'copy',
-    'minify-html',
     'svg-symbols',
+    'html',
     'style',
     'minify-scripts',
     'webp',
@@ -123,5 +126,5 @@ gulp.task('serve', function() {
 
   gulp.watch('source/sass/**/*.{scss,sass}', ['style']);
   gulp.watch('source/js/*.js', ['minify-scripts']).on('change', server.reload);
-  gulp.watch('source/*.html', ['minify-html']).on('change', server.reload);
+  gulp.watch('source/*.html', ['html']).on('change', server.reload);
 });
