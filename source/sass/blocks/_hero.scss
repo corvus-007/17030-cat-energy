@@ -68,12 +68,13 @@
     z-index: 1;
     max-width: 425px;
     margin-left: 90px;
-    margin-bottom: 53px;
+    margin-bottom: 45px;
     font-size: 20px;
     line-height: 20px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 53px;
     margin-left: ($gutter-huge * 2);
   }
 }
